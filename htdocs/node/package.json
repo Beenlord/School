@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  }
+}

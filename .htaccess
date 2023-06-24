@@ -1,0 +1,3 @@
+RewriteEngine on
+Rewritecond %{REQUEST_FILENAME} !public
+RewriteRule . index.php [L]

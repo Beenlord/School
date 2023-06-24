@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg" href="/public/heart.svg">
+    <link rel="stylesheet" href="/public/styles/style.css">
+    <title><?= $title ?></title>
+</head>
+<body>
+	<main :class="[`application`, `application__screen-${screen.value}`]" v-on:click="moveScreen(1, $event)">
+		<img :class="[`heart`, `application_heart`]" src="/public/heart.svg" @click="screen.value ? setScreen(0, $event) : false">
+		<div :class="[`screen`, `screen__s0`, {screen__hidden: screen.value != 0}]">
+			<div class="title">
+				{{ json.length }} <br>
+				reasons <br>
+				of love
+			</div>
+			<div class="helper">
+				tap on the screen
+			</div>
+		</div>
+		<div :class="[`screen`, `screen__s1`, `screen__shadow`, {screen__hidden: screen.value != 1}]">
+			<div :class="[`content-area`, (screen.value == 1 ? `content-area__static`: ``)]">
+				Эммочка, самое главное, что мы есть друг у друга, и&nbsp;это навсегда&nbsp;😊💕
+				<!--Моё милое солнышко, я тебя очень сильно люблю и посвещаю тебе все эти приятные слова.-->
+			</div>
+		</div>
+		<div :class="[`screen`, `screen__s2`, `screen__shadow`, {screen__hidden: screen.value != 2}]">
+			<div :class="[`content-area`, (screen.value == 2 ? `content-area__dynamic`: ``)]">
+				{{ json.values[0] }}
+			</div>
+			<div class="helper application_helper">
+				tap on the screen again
+			</div>
+		</div>
+		<div :class="[`watermark`, 'application_watermark']">
+			Made for Emma with love
+		</div>
+	</main>
+    <script src="/public/scripts/script.js"></script>
+</body>
+</html>
