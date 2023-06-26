@@ -1,5 +1,5 @@
-.idea
-!.idea/docker-test.iml
+!.gitkeep
 
+.idea
 node_modules
 logs
