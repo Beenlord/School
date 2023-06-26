@@ -5,7 +5,7 @@
         public static function register()
         {
             spl_autoload_register(function ($class) {
-                $file = str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php';
+                $file = str_replace('\\', DIRECTORY_SEPARATOR, $class).PHP;
                 // echo $file . "<br />";
                 if (file_exists($file)) {
                     require $file;

@@ -10,12 +10,7 @@
 			echo "This is api controller";
 		}
 
-		public function _v0($method = "index") {
-			if ($method) self::callSubmethod($method);
-		}
-
-		public function get_users() {
-			var_dump([]);
+		public function _v0() {
 		}
 	}
 	

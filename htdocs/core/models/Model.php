@@ -6,6 +6,6 @@
 	class Model extends R
 	{
 		public function __construct() {
-			self::setup('sqlite:sqlite/main.db');
+			self::setup(DB_CONNECTION);
 		}
 	}
