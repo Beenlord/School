@@ -5,7 +5,7 @@
   if (!defined("RMP")) {
 	  // RMP - Префиксы предназначены для того,
 	  // чтобы отделять открытые api методы.
-	  define("RMP", RMP);
+	  define("RMP", "_");
 	}
 
 	final class Application
